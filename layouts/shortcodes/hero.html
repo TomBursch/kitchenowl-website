@@ -1,0 +1,24 @@
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-lg-4 offset-lg-2">
+            {{- $screenshot := resources.Get "images/List.png" -}}
+            <img src="{{ $screenshot.RelPermalink }}" class="d-block mx-lg-auto img-fluid shadow-lg rounded mt-4"
+                alt="Screenshot" loading="lazy" data-aos="fade-up" data-aos-delay="50" data-aos-duration="600"
+                style="transform: perspective(500px) rotate3D(2, -5, 0, 10deg) scale(0.9);">
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">The last grocery app you'll ever need!</h1>
+            <p class="lead py-3">KitchenOwl is a smart grocery list and recipe manager. Easily add items to your
+                shopping list before you go shopping or create recipes and get cooking suggestions. Track your expenses,
+                so you know how much you've spent. Download now!</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a class="btn btn-primary btn-lg px-4"
+                    href="https://play.google.com/store/apps/details?id=com.tombursch.kitchenowl">PlayStore</a>
+                <a class="btn btn-primary btn-lg px-4 me-md-2"
+                    href="https://testflight.apple.com/join/x7LhltFw">App Store</a>
+                <a class="btn btn-outline-secondary btn-lg px-4"
+                    href="https://github.com/TomBursch/kitchenowl/releases/latest">Other Platforms</a>
+            </div>
+        </div>
+    </div>
+</div>

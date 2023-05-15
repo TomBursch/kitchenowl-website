@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{- partial "head.html" . -}}
+  </head>
+  <body class="d-flex flex-column h-100">
+    {{- partial "header.html" . -}}
+    <main class="flex-shrink-0">
+      {{- block "main" . }}{{- end }}
+    </main>
+    <footer class="footer mt-auto py-3 bg-body-tertiary">
+      {{- partial "footer.html" . -}}
+    </footer>
+    {{- partial "script-footer.html" . -}}
+  </body>
+</html>

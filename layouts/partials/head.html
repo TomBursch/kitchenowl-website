@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+{{/* Load Bootstrap SCSS. */}}
+{{ $options := dict "enableSourceMap" true }}
+{{ if hugo.IsProduction}}
+{{ $options := dict "enableSourceMap" false "outputStyle" "compressed" }}
+{{ end }}
+{{ $styles := resources.Get "scss/styles.scss" }}
+{{ $styles = $styles | resources.ToCSS $options }}
+{{ if hugo.IsProduction }}
+{{ $styles = $styles | fingerprint }}
+{{ end }}
+<link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+<meta name="description" content="{{ .Description | default .Site.Params.SiteDescription}}">

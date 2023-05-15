@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand fixed-top static bg-body-tertiary">
+    <div class="container">
+        {{ $image := resources.Get "images/kitchenowl.svg" }}
+        {{/* <a class="navbar-brand" href="/"><img src="{{ $image.RelPermalink }}" alt="{{- .Site.Title -}}" width="30"
+                height="24"></a> */}}
+        {{/*  <a class="nav-link{{ if $.IsMenuCurrent " main" . }} active" aria-current="page{{ end }}" href="/">
+            <span>Home</span></a>  */}}
+            <a class="nav-link{{ if .IsHome }} active" aria-current="page{{ end }}" href="/">
+                <span>Home</span></a>
+        <div class="navbar-nav me-2 mb-0">
+            {{ range .Site.Menus.main }}
+            <a class="nav-link{{ if $.IsMenuCurrent " main" . }} active" aria-current="page{{ end }}"
+                href="{{ .URL }}">{{ .Pre }}
+                <span>{{ .Name }}</span></a>
+            {{ end }}
+            <a href="https://app.kitchenowl.org" class="btn btn-primary ms-3" role="button">Go to Web App</a>
+        </div>
+    </div>
+</nav>
