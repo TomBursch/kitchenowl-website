@@ -3,8 +3,7 @@ $fa-font-path: "../fontawesome/webfonts";
 @import "../fontawesome/scss/solid";
 @import "../fontawesome/scss/brands";
 
-
-@import "bootstrap/functions"; 
+@import "bootstrap/functions";
 @import "bootstrap/variables";
 
 $primary: #20ac64;
@@ -20,19 +19,26 @@ $gray-800: #161616;
 $gray-900: #303030;
 
 // merge with existing $theme-colors map
-$theme-colors: map-merge($theme-colors, (
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "light":      $light,
-  "dark":       $dark
-));
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "light": $light,
+    "dark": $dark,
+  )
+);
 
-$colors: map-merge($colors, (
-  "green":    $primary,
-));
+$colors: map-merge(
+  $colors,
+  (
+    "green": $primary,
+  )
+);
 
-
-$grays: map-merge($grays, (
+$grays: map-merge(
+  $grays,
+  (
     "100": $gray-100,
     "200": $gray-200,
     "500": $gray-500,
@@ -40,9 +46,21 @@ $grays: map-merge($grays, (
     "700": $gray-700,
     "800": $gray-800,
     "900": $gray-900,
-));
+  )
+);
 
 $border-radius: 1rem;
+
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5,
+  7: $spacer * 6,
+);
 
 // set changes
 @import "bootstrap/bootstrap";
@@ -50,38 +68,37 @@ $border-radius: 1rem;
 // Other overrides
 // --
 .btn-outline-primary {
-    --#{$prefix}btn-hover-color: #{$light};
+  --#{$prefix}btn-hover-color: #{$light};
 }
 
 .btn-primary {
-    --#{$prefix}btn-color: #{$light};
-    --#{$prefix}btn-hover-color: #{$light};
+  --#{$prefix}btn-color: #{$light};
+  --#{$prefix}btn-hover-color: #{$light};
 }
 
 .btn-text {
-    --#{$prefix}btn-color: #{$gray-600};
-    --#{$prefix}btn-hover-color: #{$primary};
+  --#{$prefix}btn-color: #{$gray-600};
+  --#{$prefix}btn-hover-color: #{$primary};
 }
 
 .nav-link {
-    &:hover,
-    &:focus {
-        color: $primary;
-    }
+  &:hover,
+  &:focus {
+    color: $primary;
+  }
 
-    &.active {
-        font-weight: 600;
-        color: $primary;
-    }
+  &.active {
+    font-weight: 600;
+    color: $primary;
+  }
 }
 
-
 .fixed-top {
+  transition: background-color 200ms linear;
+  &.static {
+    background-color: rgba(var(--bs-tertiary-bg), 0) !important;
     transition: background-color 200ms linear;
-    &.static {
-        background-color: rgba(var(--bs-tertiary-bg), 0) !important;
-        transition: background-color 200ms linear;
-    }
+  }
 }
 
 /*
@@ -89,60 +106,66 @@ $border-radius: 1rem;
 */
 
 .product-device {
-    position: absolute;
-    right: 10%;
-    bottom: -30%;
-    width: 300px;
-    height: 540px;
-    background-color: #333;
-    border-radius: 21px;
-    transform: rotate(30deg);
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  transform: rotate(30deg);
 }
-  
+
 .product-device::before {
-    position: absolute;
-    top: 10%;
-    right: 10px;
-    bottom: 10%;
-    left: 10px;
-    content: "";
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
 }
-  
+
 .product-device-2 {
-    top: -25%;
-    right: auto;
-    bottom: 0;
-    left: 5%;
-    background-color: $primary;
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: $primary;
 }
 
 .parallax {
-    overflow-x: hidden;
-    overflow-y: auto;
-    transform-style: preserve-3d;
-    perspective: 1px;
-    z-index: -1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform-style: preserve-3d;
+  perspective: 1px;
+  z-index: -1;
 }
-  
+
 .parallax-layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .layer1 {
-    transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .layer2 {
-    transform: translateZ(-1px) scale(1.5);
+  transform: translateZ(-1px) scale(1.5);
 }
 
 .layer3 {
-    transform: translateZ(-2px) scale(2);
+  transform: translateZ(-2px) scale(2);
+}
+
+@include media-breakpoint-down(sm) {
+  [data-aos-delay] {
+    transition-delay: 0s !important;
+  }
 }

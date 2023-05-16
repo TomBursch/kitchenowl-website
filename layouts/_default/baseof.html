@@ -5,7 +5,7 @@
   </head>
   <body class="d-flex flex-column h-100">
     {{- partial "header.html" . -}}
-    <main class="flex-shrink-0">
+    <main class="flex-shrink-0 overflow-x-hidden">
       {{- block "main" . }}{{- end }}
     </main>
     <footer class="footer mt-auto py-3 bg-body-tertiary">
