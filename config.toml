@@ -7,6 +7,7 @@ enableInlineShortcodes = true
 [params]
   author = 'Tom Bursch'
   description = "KitchenOwl is a smart grocery list and recipe manager. Easily add items to your shopping list before you go shopping or create recipes and get cooking suggestions."
+  theme_color = "#20ac64"
 
 [module]
 [[module.imports]]

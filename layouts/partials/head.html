@@ -12,5 +12,47 @@
 {{ $styles = $styles | fingerprint }}
 {{ end }}
 <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
+
+{{/* Site description */}}
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
-<meta name="description" content="{{ .Description | default .Site.Params.SiteDescription}}">
+<meta name="description" content="{{ .Description | default .Site.Params.Description}}">
+{{ $faviconIco := resources.Get "favicon/favicon.ico"}}
+{{ $favicon := resources.Get "favicon/favicon.png"}}
+{{ $favicon16 := $favicon.Resize "16x"}}
+{{ $favicon32 := $favicon.Resize "32x"}}
+{{ $favicon57 := $favicon.Resize "57x"}}
+{{ $favicon64 := $favicon.Resize "64x"}}
+{{ $favicon60 := $favicon.Resize "60x"}}
+{{ $favicon72 := $favicon.Resize "72x"}}
+{{ $favicon76 := $favicon.Resize "76x"}}
+{{ $favicon96 := $favicon.Resize "96x"}}
+{{ $favicon114 := $favicon.Resize "114x"}}
+{{ $favicon120 := $favicon.Resize "120x"}}
+{{ $favicon144 := $favicon.Resize "144x"}}
+{{ $favicon152 := $favicon.Resize "152x"}}
+{{ $favicon160 := $favicon.Resize "160x"}}
+{{ $favicon180 := $favicon.Resize "180x"}}
+{{ $favicon192 := $favicon.Resize "192x"}}
+{{ $bc := resources.Get "browserconfig.xml" }}
+{{ $bcURL := "browserconfig.xml" }}
+{{ $bc = $bc | resources.ExecuteAsTemplate $bcURL . }}
+<meta name="msapplication-config" content="{{ $bc.RelPermalink }}" />
+<meta name="msapplication-TileColor" content="{{ site.Params.theme_color | default " #FFFFFF" }}">
+<meta name="msapplication-TileImage" content="{{ $favicon144.RelPermalink }}">
+<link rel="shortcut icon" href="{{ $faviconIco.RelPermalink }}">
+<link rel="icon" sizes="16x16 32x32 64x64" href="{{ $faviconIco.RelPermalink }}">
+<link rel="icon" type="image/png" sizes="196x196" href="{{ $favicon192.RelPermalink }}">
+<link rel="icon" type="image/png" sizes="160x160" href="{{ $favicon160.RelPermalink }}">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ $favicon96.RelPermalink }}">
+<link rel="icon" type="image/png" sizes="64x64" href="{{ $favicon64.RelPermalink }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ $favicon32.RelPermalink }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ $favicon16.RelPermalink }}">
+<link rel="apple-touch-icon" href="{{ $favicon57.RelPermalink }}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ $favicon114.RelPermalink }}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ $favicon72.RelPermalink }}">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ $favicon144.RelPermalink }}">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ $favicon60.RelPermalink }}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ $favicon120.RelPermalink }}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ $favicon76.RelPermalink }}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ $favicon152.RelPermalink }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ $favicon180.RelPermalink }}">

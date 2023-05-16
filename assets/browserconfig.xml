@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+    {{ $favicon := resources.Get "favicon/favicon.png"}}
+    {{ $favicon70 := $favicon.Resize "70x"}}
+    {{ $favicon150 := $favicon.Resize "150x"}}
+    {{ $favicon310 := $favicon.Resize "310x"}}
+      <square70x70logo src="{{ $favicon70.RelPermalink }}" />
+      <square150x150logo src="{{ $favicon150.RelPermalink }}" />
+      <square310x310logo src="{{ $favicon310.RelPermalink }}" />
+      <TileColor>{{ .Site.Params.theme_color | default "#FFFFFF" }}</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>
