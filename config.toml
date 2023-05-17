@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'KitchenOwl'
 
 enableInlineShortcodes = true
+disableKinds = ['taxonomy', 'term']
 
 [params]
   author = 'Tom Bursch'
