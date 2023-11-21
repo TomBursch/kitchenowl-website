@@ -6,37 +6,43 @@ draft: false
 
 # Privacy Policy
 
-_Last updated: May 22, 2023_
+_Last updated: Nov 21, 2023_
 
 This privacy policy describes our policies and procedures on the collection, use and disclosure of your information when you use the service and tells you about your privacy rights and how the law protects you.
 
 The KitchenOwl applications, including the Android, iOS, Web, Windows, macOS, and Linux applications, and websites, including homepage, and documentation, do not send any data to any service without your authorization.
 
+We love open-source software, thus we will never monetize or sell your information, and this service and software will always stay free and open.
+
 ## Security of Your Personal Data
 
 The security of your personal data is important to us, but remember that no method of transmission over the internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal data, we cannot guarantee its absolute security.
 
-## What data does the application use?
+## Stored data
+#### What data does the landing page (this website) use?
+We use the open source Plausible Analytics routed and self-hosted through our `stats` subdomain to count website visits, downloads, etc. No cookies are used, and no personal data is stored.
 
-- Settings
+#### What data does the application use?
+
+- Local preferences
 - Online cloud service credentials:
   - Cloud service URI
   - Tokens for authentication
 
 The application does not use any third-party tracking APIs.
 
-## What data does the cloud service use?
+#### What data does the cloud service use?
 
 The cloud is used to store and sync every content that you create inside the application. If you do not use the [default cloud service](https://app.kitchenowl.org) you should consult the third-party cloud service's privacy policy.
 
-### What data can the server owner see?
+##### What data can the server owner see?
 
 - All information provided during the sign-up process, including but not limited to your username and email address.
 - Information about any device that connects to the server, including but not limited to the device's operating system, browser, and IP address.
   - This information is stored for up to 30 days after the device was last used.
 - All content you upload and store inside the application including images.
 
-### How can I delete my data?
+##### How can I delete my data?
 
 1. If you use the default cloud service, you can head to the account deletion page by going to Settings, User, "more", then "Delete account". Once you confirm the action your account and any data associated with it will be irreversibly deleted.
    - Households may not be deleted if other members are present.

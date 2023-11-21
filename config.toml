@@ -10,17 +10,25 @@ disableKinds = ['taxonomy', 'term']
   description = "KitchenOwl is a smart grocery list and recipe manager. Easily add items to your shopping list before you go shopping or create recipes and get cooking suggestions."
   theme_color = "#20ac64"
 
+[params.plausible]
+  enable = true
+  domain = "kitchenowl.org"
+  selfhosted_domain = "stats.kitchenowl.org"
+
+
 [module]
-[[module.imports]]
-path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
+  [[module.imports]]
+    path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
+  [[module.imports]]
+    path = "github.com/divinerites/plausible-hugo"
 
 [markup.goldmark.renderer]
-unsafe = true
+  unsafe = true
 
 [menu]
-main = [
-    { name = 'docs', url = 'https://docs.kitchenowl.org/' }
-]
+  main = [
+      { name = 'docs', url = 'https://docs.kitchenowl.org/' }
+  ]
 
 [privacy]
   [privacy.disqus]
@@ -35,3 +43,23 @@ main = [
     disable = true
   [privacy.youtube]
     disable = true
+
+
+[languages]
+  [languages.en]
+    languageName = 'English'
+    weight = 1
+  [languages.de]
+    languageName = 'Deutsch'
+    weight = 2
+
+
+[[module.mounts]]
+source = 'content'
+target = 'content'
+lang = 'en'
+
+[[module.mounts]]
+  source = 'content'
+  target = 'content'
+  lang = 'de'

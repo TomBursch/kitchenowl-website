@@ -1,6 +1,7 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ .Language }}">
   <head>
+    {{ partial "plausible_head.html" . }}
     {{- partial "head.html" . -}}
   </head>
   <body class="d-flex flex-column h-100">

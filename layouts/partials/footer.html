@@ -1,6 +1,6 @@
 <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 pt-4 mt-3 border-top">
-        <div class="col col-sm-12 col-md-12 mb-3">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 pt-4 mt-3 border-top">
+        <div class="col col-xl-4 col-sm-12 col-md-12 mb-3">
             <ul class="nav mb-3 list-unstyled d-flex">
                 <li><a class="text-body-secondary" href="https://github.com/tombursch"><i class="fa-brands fa-github"></i></a></li>
                 <li class="ms-3"><a class="text-body-secondary" href="https://hub.docker.com/u/tombursch"><i class="fa-brands fa-docker"></i></a></li>
@@ -11,11 +11,18 @@
         </div>
 
         <div class="col mb-3">
-
+            <h5>{{ i18n "get-kitchenowl" }}</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="https://play.google.com/store/apps/details?id=com.tombursch.kitchenowl" class="nav-link p-0 text-body-secondary">Google Play</a></li>
+                <li class="nav-item mb-2"><a href="https://f-droid.org/packages/com.tombursch.kitchenowl/" class="nav-link p-0 text-body-secondary">F-Droid</a></li>
+                <li class="nav-item mb-2"><a href="https://apps.apple.com/app/kitchenowl/id1557453670" class="nav-link p-0 text-body-secondary">Apple Store</a></li>
+                <li class="nav-item mb-2"><a href="https://hosted.weblate.org/engage/kitchenowl/" class="nav-link p-0 text-body-secondary">Web</a></li>
+                <li class="nav-item mb-2"><a href="https://docs.kitchenowl.org/self-hosting/" class="nav-link p-0 text-body-secondary">Server</a></li>
+            </ul>
         </div>
 
         <div class="col mb-3">
-            <h5>Get Started</h5>
+            <h5>{{ i18n "get-started" }}</h5>
             <ul class="nav flex-column">
                 {{/*  <li class="nav-item mb-2"><a href="https://docs.kitchenowl.org/#features" class="nav-link p-0 text-body-secondary">FAQs</a></li>  */}}
                 <li class="nav-item mb-2"><a href="https://docs.kitchenowl.org/self-hosting/" class="nav-link p-0 text-body-secondary">Self-host guide</a></li>
@@ -24,21 +31,21 @@
         </div>
 
         <div class="col mb-3">
-            <h5>About</h5>
+            <h5>{{ i18n "about" }}</h5>
             <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="/features" class="nav-link p-0 text-body-secondary">Features</a></li>
+                <li class="nav-item mb-2"><a href="{{ relLangURL "/features" }}" class="nav-link p-0 text-body-secondary">Features</a></li>
                 <li class="nav-item mb-2"><a href="https://github.com/tombursch/kitchenowl" class="nav-link p-0 text-body-secondary">Source Code</a></li>
                 
             </ul>
         </div>
 
         <div class="col mb-3">
-            <h5>Legal</h5>
+            <h5>{{ i18n "legal" }}</h5>
             <ul class="nav flex-column">
                 {{/*  <li class="nav-item mb-2"><a href="/terms" class="nav-link p-0 text-body-secondary">Terms & Conditions</a></li>  */}}
-                <li class="nav-item mb-2"><a href="/privacy" class="nav-link p-0 text-body-secondary">Privacy Policy</a></li>
-                <li class="nav-item mb-2"><a href="/license" class="nav-link p-0 text-body-secondary">License</a></li>
-                <li class="nav-item mb-2"><a href="/imprint" class="nav-link p-0 text-body-secondary">Imprint</a></li>
+                <li class="nav-item mb-2"><a href="{{ relLangURL "/privacy" }}" class="nav-link p-0 text-body-secondary">{{ i18n "privacy-policy" }}</a></li>
+                <li class="nav-item mb-2"><a href="{{ relLangURL "/license" }}" class="nav-link p-0 text-body-secondary">{{ i18n "license" }}</a></li>
+                <li class="nav-item mb-2"><a href="{{ relLangURL "/imprint" }}" class="nav-link p-0 text-body-secondary">{{ i18n "imprint" }}</a></li>
             </ul>
         </div>
     </div>

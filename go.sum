@@ -1,3 +1,5 @@
+github.com/divinerites/plausible-hugo v1.19.2 h1:Ksd1Ewp53gPmzm6vhDdRUxkUYwigaykhZlzOYzHYCzQ=
+github.com/divinerites/plausible-hugo v1.19.2/go.mod h1:cxr+YB3FUwbLon8KCs4pV4Ankbkq6lJxTQUpNb5KqPo=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20002 h1:6F6sjCSkFIIgqLp4SEIL1Ao9ZfKyM6OmgqEdTlc58Yk=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20002/go.mod h1:Q6TrjM78wB13zkOMBSV4IZIZ54tbshmE2fem9CYx2pU=
 github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000/go.mod h1:mFberT6ZtcchrsDtfvJM7aAH2bDKLdOnruUHl0hlapI=
