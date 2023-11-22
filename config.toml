@@ -14,6 +14,7 @@ disableKinds = ['taxonomy', 'term']
   enable = true
   domain = "kitchenowl.org"
   selfhosted_domain = "stats.kitchenowl.org"
+  outbound_link = true
 
 
 [module]
