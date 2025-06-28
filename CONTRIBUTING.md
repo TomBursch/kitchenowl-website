@@ -28,7 +28,7 @@ The `description` is a descriptive summary of the change the PR will make.
 - One PR per fix or feature
 
 ### Requirements
-- Hugo v0.101.0 
+- Hugo v0.142.0 
 
 ### Setup & Install
 - Run debug server with `hugo server`

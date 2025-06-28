@@ -61,6 +61,6 @@ target = 'content'
 lang = 'en'
 
 [[module.mounts]]
-  source = 'content'
-  target = 'content'
-  lang = 'de'
+source = 'content'
+target = 'content'
+lang = 'de'

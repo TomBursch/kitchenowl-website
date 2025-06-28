@@ -1,0 +1,25 @@
+<div class="row g-4 py-5">
+{{ if and (isset .Params "image") (not (isset .Params "right")) }}
+<div class="col-md-3 col-sm-12" data-aos="fade-in" data-aos-delay="50">
+<img src="{{ .Get "image" }}" alt="{{ .Get "alt" }}" style="width: 100%; border-radius: 10px; object-fit: cover; max-height: 400px; object-position: 0% 0%;">
+</div>
+{{ end }}
+<div class="w-100 d-block d-sm-none"></div>
+<div class="col-9" data-aos="fade-left" data-aos-delay="0">
+<h3>{{ .Get "title" }}</h3>
+<div>
+    {{ .Get "text" | markdownify }}
+</div>
+
+{{ if (isset .Params "buttonlink") }}
+<a href="{{ .Get "buttonlink" }}" class="btn btn-primary btn-lg" role="button" style="margin-top:0px;">
+    {{ .Get "buttontext" }}
+</a>
+{{ end }}
+</div>
+{{ if and (isset .Params "image") (isset .Params "right") }}
+<div class="col-md-3 col-sm-12" data-aos="fade-in" data-aos-delay="50">
+<img src="{{ .Get "image" }}" alt="{{ .Get "alt" }}" style="width: 100%; border-radius: 10px; object-fit: cover; max-height: 400px; object-position: 0% 0%;">
+</div>
+{{ end }}
+</div>
